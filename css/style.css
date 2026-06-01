@@ -1,0 +1,88 @@
+body{
+    background:#0F172A;
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.navbar{
+    background-color: #1b1f24 !important;
+}
+
+.navbar-brand{
+    color: #00d4ff !important;
+    font-size: 1.4rem;
+}
+
+.nav-link{
+    color: white !important;
+    margin-left: 10px;
+}
+
+.nav-link:hover{
+    color: #00d4ff !important;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:#06B6D4 !important;
+}
+
+.logo span{
+    display:block;
+    font-size:.8rem;
+    color:white;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:bold;
+}
+
+.hero span{
+    color:#06B6D4;
+}
+
+.hero p{
+    margin:20px 0;
+    color:#cbd5e1;
+}
+
+.btn-selen{
+    background:#06B6D4;
+    color:white;
+    padding:12px 30px;
+    border-radius:12px;
+}
+
+.sensor-section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.sensor-card{
+    background:#1E293B;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.sensor-card:hover{
+    transform:translateY(-10px);
+}
+
+.sensor-card a{
+    text-decoration:none;
+    color:#06B6D4;
+}

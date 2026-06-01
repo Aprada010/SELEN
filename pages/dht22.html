@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HC-SR04 | SELEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <a href="../index.html" class="btn btn-selen mb-4">
+        ← Kembali
+    </a>
+
+    <h1 class="mb-4">
+        DHT22
+    </h1>
+
+    <img src="../images/dht22.png"
+     class="img-fluid rounded mb-4 sensor-image"
+     alt="DHT22">
+
+    <p>
+        DHT22 adalah sensor digital yang digunakan untuk
+        mengukur suhu dan kelembapan udara dengan tingkat
+        akurasi yang cukup tinggi.
+    </p>
+
+    <hr>
+
+    <h2>Tujuan Pembelajaran</h2>
+
+    <ul>
+
+    <li>Menjelaskan fungsi sensor DHT22.</li>
+
+    <li>Mengidentifikasi fungsi setiap pin DHT22.</li>
+
+    <li>Melakukan wiring DHT22 ke Arduino Uno.</li>
+
+    <li>Menjalankan simulasi DHT22 pada Wokwi.</li>
+
+    </ul>
+    
+    <hr>
+
+    <h2>Fungsi Pin</h2>
+
+    <table class="table table-dark table-striped">
+
+        <thead>
+            <tr>
+                <th>Pin</th>
+                <th>Fungsi</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>VCC</td>
+                <td>Memberikan catu daya 5V</td>
+            </tr>
+
+            <tr>
+                <td>DATA</td>
+                <td>Mengirim data suhu dan kelembapan</td>
+            </tr>
+
+            <tr>
+                <td>GND</td>
+                <td>Ground</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h2>Cara Kerja Sensor</h2>
+
+    <ol>
+
+    <li>DHT22 mendeteksi suhu lingkungan.</li>
+
+    <li>DHT22 mendeteksi kelembapan udara.</li>
+
+    <li>Data diolah oleh sensor.</li>
+
+    <li>Data dikirim melalui pin DATA.</li>
+
+    <li>Arduino membaca dan menampilkan hasil.</li>
+
+    </ol>
+
+    <hr>
+
+    <h2>Wiring Arduino</h2>
+
+    <table class="table table-dark table-striped">
+
+        <thead>
+            <tr>
+                <th>HC-SR04</th>
+                <th>Arduino</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>VCC</td>
+                <td>5V</td>
+            </tr>
+
+            <tr>
+                <td>GND</td>
+                <td>GND</td>
+            </tr>
+
+            <tr>
+                <td>DATA</td>
+                <td>D2</td>
+            </tr>
+
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h2>Kesalahan Wiring yang Sering Terjadi</h2>
+
+    <ul>
+
+    <li>Pin DATA tidak terhubung ke D2.</li>
+
+    <li>Pin VCC tidak terhubung ke 5V.</li>
+
+    <li>Pin GND tidak terhubung.</li>
+
+    <li>VCC dan GND tertukar.</li>
+
+    </ul>
+
+    <hr>
+
+    <h2>Simulasi</h2>
+
+    <p>
+        Klik tombol berikut untuk mencoba simulasi HC-SR04.
+    </p>
+
+    <a href="https://wokwi.com/projects/465534394243112961"
+       target="_blank"
+       class="btn btn-selen">
+
+       Jalankan Simulasi
+
+    </a>
+
+    <hr>
+
+    <h2>Analisis Hasil Simulasi</h2>
+
+    <p>
+
+    Saat simulasi dijalankan, sensor DHT22 akan
+    mengukur suhu dan kelembapan udara.
+
+    Nilai suhu ditampilkan dalam satuan derajat
+    Celcius (°C), sedangkan kelembapan ditampilkan
+    dalam satuan persen (%).
+
+    Ketika slider suhu atau kelembapan diubah,
+    nilai pada Serial Monitor juga akan berubah.
+
+    </p>
+
+    <hr>
+
+    <h2>Mini Quiz DHT22</h2>
+
+    <form id="quizDHT">
+
+    <div class="mb-3">
+
+    <p>
+    1. Sensor DHT22 digunakan untuk mengukur?
+    </p>
+
+    <input type="radio" name="q1dht" value="0">
+    Jarak<br>
+
+    <input type="radio" name="q1dht" value="1">
+    Suhu dan kelembapan<br>
+
+    <input type="radio" name="q1dht" value="0">
+    Intensitas cahaya<br>
+
+    <input type="radio" name="q1dht" value="0">
+    Kadar gas
+
+    </div>
+
+    <div class="mb-3">
+
+    <p>
+    2. Pin yang digunakan untuk mengirim data adalah?
+    </p>
+
+    <input type="radio" name="q2dht" value="0">
+    VCC<br>
+
+    <input type="radio" name="q2dht" value="1">
+    DATA<br>
+
+    <input type="radio" name="q2dht" value="0">
+    NC<br>
+
+    <input type="radio" name="q2dht" value="0">
+    GND
+
+    </div>
+
+    <div class="mb-3">
+
+    <p>
+    3. Pada simulasi SELEN, pin DATA terhubung ke Arduino pin?
+    </p>
+
+    <input type="radio" name="q3dht" value="0">
+    D10<br>
+
+    <input type="radio" name="q3dht" value="0">
+    A0<br>
+
+    <input type="radio" name="q3dht" value="1">
+    D2<br>
+
+    <input type="radio" name="q3dht" value="0">
+    D13
+
+    </div>
+
+    <button
+    type="button"
+    class="btn btn-selen"
+    onclick="cekQuizDHT()">
+
+    Periksa Jawaban
+
+    </button>
+
+    </form>
+
+    <div id="hasilQuizDHT" class="mt-3"></div>
+
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+    <a class="navbar-brand" href="../index.html">
+      SELEN
+    </a>
+
+    <div class="navbar-nav ms-auto">
+
+      <a class="nav-link" href="../index.html">
+        Home
+      </a>
+
+      <a class="nav-link" href="hc-sr04.html">
+        Sensor
+      </a>
+
+      <a class="nav-link" href="evaluasi.html">
+        Evaluasi
+      </a>
+
+      <a class="nav-link" href="tentang.html">
+        Tentang
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+</html>
+
+<hr>
+
+<div class="d-flex justify-content-between">
+
+    <a href="hc-sr04.html"
+       class="btn btn-secondary">
+       ← HC-SR04
+    </a>
+
+    <a href="ldr.html"
+       class="btn btn-selen">
+       LDR →
+    </a>
+
+</div>

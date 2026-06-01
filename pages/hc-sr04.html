@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HC-SR04 | SELEN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <a href="../index.html" class="btn btn-selen mb-4">
+        ← Kembali
+    </a>
+
+    <h1 class="mb-4">
+        HC-SR04
+    </h1>
+
+    <img src="../images/hc-sr04.png"
+     class="img-fluid rounded mb-4 sensor-image"
+     alt="HC-SR04">
+
+    <p>
+        Sensor ultrasonik yang digunakan untuk mengukur jarak
+        berdasarkan pantulan gelombang suara ultrasonik.
+    </p>
+
+    <hr>
+
+    <h2>Tujuan Pembelajaran</h2>
+
+    <ul>
+
+    <li>Menjelaskan fungsi sensor HC-SR04.</li>
+
+    <li>Mengidentifikasi fungsi setiap pin HC-SR04.</li>
+
+    <li>Melakukan wiring HC-SR04 ke Arduino Uno.</li>
+
+    <li>Menjalankan simulasi HC-SR04 pada Wokwi.</li>
+
+</ul>
+    
+    <hr>
+
+    <h2>Fungsi Pin</h2>
+
+    <table class="table table-dark table-striped">
+
+        <thead>
+            <tr>
+                <th>Pin</th>
+                <th>Fungsi</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>VCC</td>
+                <td>Memberikan catu daya 5V</td>
+            </tr>
+
+            <tr>
+                <td>TRIG</td>
+                <td>Mengirim gelombang ultrasonik</td>
+            </tr>
+
+            <tr>
+                <td>ECHO</td>
+                <td>Menerima pantulan gelombang</td>
+            </tr>
+
+            <tr>
+                <td>GND</td>
+                <td>Ground</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h2>Cara Kerja Sensor</h2>
+
+    <ol>
+
+    <li>
+    Pin TRIG mengirim gelombang ultrasonik.
+    </li>
+
+    <li>
+    Gelombang mengenai objek.
+    </li>
+
+    <li>
+    Gelombang dipantulkan kembali.
+    </li>
+
+    <li>
+    Pin ECHO menerima pantulan.
+    </li>
+
+    <li>
+    Arduino menghitung jarak objek.
+    </li>
+
+    </ol>
+
+    <hr>
+
+    <h2>Wiring Arduino</h2>
+
+    <table class="table table-dark table-striped">
+
+        <thead>
+            <tr>
+                <th>HC-SR04</th>
+                <th>Arduino</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>VCC</td>
+                <td>5V</td>
+            </tr>
+
+            <tr>
+                <td>GND</td>
+                <td>GND</td>
+            </tr>
+
+            <tr>
+                <td>TRIG</td>
+                <td>D9</td>
+            </tr>
+
+            <tr>
+                <td>ECHO</td>
+                <td>D10</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <h2>Kesalahan Wiring yang Sering Terjadi</h2>
+
+    <ul>
+
+    <li>TRIG disambungkan ke pin yang salah.</li>
+
+    <li>ECHO disambungkan ke pin yang salah.</li>
+
+    <li>VCC tidak terhubung ke 5V.</li>
+
+    <li>Ground tidak terhubung.</li>
+
+    <li>VCC dan GND tertukar.</li>
+
+    </ul>
+
+    <hr>
+
+    <h2>Simulasi</h2>
+
+    <p>
+        Klik tombol berikut untuk mencoba simulasi HC-SR04.
+    </p>
+
+    <a href="https://wokwi.com/projects/465534239793094657"
+       target="_blank"
+       class="btn btn-selen">
+
+       Jalankan Simulasi
+
+    </a>
+
+    <hr>
+
+    <h2>Analisis Hasil Simulasi</h2>
+
+    <p>
+
+    Saat simulasi dijalankan, sensor HC-SR04
+    akan mengukur jarak objek menggunakan
+    gelombang ultrasonik.
+
+    Semakin dekat objek dengan sensor,
+    nilai jarak yang tampil pada Serial Monitor
+    akan semakin kecil.
+
+    Semakin jauh objek dari sensor,
+    nilai jarak akan semakin besar.
+
+    </p>
+
+    <hr>
+
+    <h2>Mini Quiz HC-SR04</h2>
+
+    <form id="quizHC">
+
+    <div class="mb-3">
+
+    <p>
+    1. Pin yang menerima pantulan gelombang ultrasonik adalah?
+    </p>
+
+    <input type="radio" name="q1" value="0"> VCC<br>
+
+    <input type="radio" name="q1" value="0"> TRIG<br>
+
+    <input type="radio" name="q1" value="1"> ECHO<br>
+
+    <input type="radio" name="q1" value="0"> GND
+
+    </div>
+
+    <div class="mb-3">
+
+    <p>
+    2. Fungsi pin TRIG adalah?
+    </p>
+
+    <input type="radio" name="q2" value="1">
+    Mengirim gelombang ultrasonik<br>
+
+    <input type="radio" name="q2" value="0">
+    Ground<br>
+
+    <input type="radio" name="q2" value="0">
+    Menerima data<br>
+
+    <input type="radio" name="q2" value="0">
+    Menyimpan data
+
+    </div>
+
+    <button
+    type="button"
+    class="btn btn-selen"
+    onclick="cekQuizHC()">
+
+    Periksa Jawaban
+
+    </button>
+
+    </form>
+
+    <div id="hasilQuizHC" class="mt-3"></div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+    <a class="navbar-brand" href="../index.html">
+      SELEN
+    </a>
+
+    <div class="navbar-nav ms-auto">
+
+      <a class="nav-link" href="../index.html">
+        Home
+      </a>
+
+      <a class="nav-link" href="hc-sr04.html">
+        Sensor
+      </a>
+
+      <a class="nav-link" href="evaluasi.html">
+        Evaluasi
+      </a>
+
+      <a class="nav-link" href="tentang.html">
+        Tentang
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+</html>
+
+<hr>
+
+<div class="d-flex justify-content-between">
+
+    <a href="../index.html"
+       class="btn btn-secondary">
+       Home
+    </a>
+
+    <a href="dht22.html"
+       class="btn btn-selen">
+       DHT22 →
+    </a>
+
+</div>
+
